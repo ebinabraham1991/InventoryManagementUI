@@ -1,3 +1,97 @@
+<div class="container-fluid">
+    <div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+  <form class="example-form ">
+     <div class="row mt-2"> 
+          
+        <div class="col-sm-3">  
+            <mat-form-field class="form-group" >
+            <mat-label>Bill Number </mat-label>
+            <input matInput placeholder="Bill Number" class="form-control" value="000000">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">  
+            <mat-form-field>
+                <mat-label>Date of Bill</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+        </div>
+        <div class="col-sm-3">  
+            <mat-form-field class="form-group" >
+            <mat-label>Time </mat-label>
+            <input matInput type="time" class="form-control" value="000000">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-3">  
+            <button mat-raised-button color="primary" class="pull-right">New</button>
+        </div>
+       
+        
+    </div>   
+      <div class="row mt-1">
+        <div class="col-sm-3"> 
+         
+        <mat-radio-button value="Cash">Cash</mat-radio-button>
+        <mat-radio-button value="Card" class="mx-1">Card</mat-radio-button>
+  
+        </div>
+        <div class="col-sm-3"> 
+            <mat-form-field class="form-group" >
+                <mat-label>Card Number </mat-label>
+                <input matInput placeholder="xxxx xxxx xx" class="form-control" >
+                </mat-form-field>
+        </div>
+        <div class="col-sm-3"> 
+            <mat-form-field class="form-group" >
+                <mat-label>Phone Number </mat-label>
+                <input matInput placeholder="+91" class="form-control" >
+                </mat-form-field>
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div class="col-sm-2">  
+            <mat-form-field class="form-group" >
+            <mat-label>Bill Number </mat-label>
+            <input matInput placeholder="Bill Number" class="form-control" value="000000">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-">  
+            <mat-form-field class="form-group" >
+            <mat-label>Bill Number </mat-label>
+            <input matInput placeholder="Bill Number" class="form-control" value="000000">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-1">  
+            <mat-form-field class="form-group" >
+            <mat-label>Bill Number </mat-label>
+            <input matInput placeholder="Bill Number" class="form-control" value="000000">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-2">  
+            <mat-form-field class="form-group" >
+            <mat-label>Bill Number </mat-label>
+            <input matInput placeholder="Bill Number" class="form-control" value="000000">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-1">  
+            <mat-form-field class="form-group" >
+            <mat-label>Bill Number </mat-label>
+            <input matInput placeholder="Bill Number" class="form-control" value="000000">
+            </mat-form-field>
+        </div>
+        <div class="col-sm-2">  
+            <mat-form-field class="form-group" >
+            <mat-label>Bill Number </mat-label>
+            <input matInput placeholder="Bill Number" class="form-control" value="000000">
+            </mat-form-field>
+        </div>
+
+      </div>
+    </form> 
+
+
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!-- Position Column -->
@@ -27,3 +121,6 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+</div>
+<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3"></div>
+</div>
