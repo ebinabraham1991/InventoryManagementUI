@@ -120,6 +120,12 @@
             <th mat-header-cell *matHeaderCellDef> Symbol </th>
             <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
           </ng-container>
+
+          <ng-container matColumnDef="fifthcolumn">
+            <th mat-header-cell *matHeaderCellDef> Fifth Column </th>
+            <td mat-cell *matCellDef="let element"> {{element.fifthcolumn}} </td>
+          </ng-container>
+         
           
           
       
@@ -214,7 +220,7 @@
 <!-- Button -->
 <div class="row mt-1 pull-right">
   <div class="col-sm-6 pull-right">
-<button mat-raised-button color="primary">Print</button>
+<button class="btn btn-primary">Print</button>
 </div> 
 <div class="col-sm-4 pull-right">
 <button mat-raised-button color="warn">Clear</button>
