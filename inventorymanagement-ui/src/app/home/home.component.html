@@ -1,4 +1,5 @@
 <div class="container-fluid">
+  <div class="row"> 
     <div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9">
   <form class="example-form ">
      <div class="row mt-2"> 
@@ -6,7 +7,7 @@
         <div class="col-sm-3">  
             <mat-form-field class="form-group" >
             <mat-label>Bill Number </mat-label>
-            <input matInput placeholder="Bill Number" class="form-control" value="000000">
+            <input matInput placeholder="Bill Number" class="form-control">
             </mat-form-field>
         </div>
         <div class="col-sm-3">  
@@ -20,21 +21,22 @@
         <div class="col-sm-3">  
             <mat-form-field class="form-group" >
             <mat-label>Time </mat-label>
-            <input matInput type="time" class="form-control" value="000000">
+            <input matInput type="time" class="form-control">
             </mat-form-field>
         </div>
         <div class="col-sm-3">  
-            <button mat-raised-button color="primary" class="pull-right">New</button>
+         <a href="#" target="_blank"><button mat-raised-button color="primary" class="pull-right">New Bill</button></a> 
         </div>
        
         
     </div>   
       <div class="row mt-1">
         <div class="col-sm-3"> 
-         
+            <div class="form-group" >    
+            <mat-label>Payment </mat-label>
         <mat-radio-button value="Cash">Cash</mat-radio-button>
         <mat-radio-button value="Card" class="mx-1">Card</mat-radio-button>
-  
+            </div>
         </div>
         <div class="col-sm-3"> 
             <mat-form-field class="form-group" >
@@ -52,38 +54,38 @@
       <div class="row mt-1">
         <div class="col-sm-2">  
             <mat-form-field class="form-group" >
-            <mat-label>Bill Number </mat-label>
-            <input matInput placeholder="Bill Number" class="form-control" value="000000">
+            <mat-label>Item Code </mat-label>
+            <input matInput placeholder="Item Code" class="form-control" >
             </mat-form-field>
         </div>
-        <div class="col-sm-">  
+        <div class="col-sm-4">  
             <mat-form-field class="form-group" >
-            <mat-label>Bill Number </mat-label>
-            <input matInput placeholder="Bill Number" class="form-control" value="000000">
-            </mat-form-field>
-        </div>
-        <div class="col-sm-1">  
-            <mat-form-field class="form-group" >
-            <mat-label>Bill Number </mat-label>
-            <input matInput placeholder="Bill Number" class="form-control" value="000000">
-            </mat-form-field>
-        </div>
-        <div class="col-sm-2">  
-            <mat-form-field class="form-group" >
-            <mat-label>Bill Number </mat-label>
-            <input matInput placeholder="Bill Number" class="form-control" value="000000">
+            <mat-label>Item Name </mat-label>
+            <input matInput placeholder="Item Name" class="form-control">
             </mat-form-field>
         </div>
         <div class="col-sm-1">  
             <mat-form-field class="form-group" >
-            <mat-label>Bill Number </mat-label>
-            <input matInput placeholder="Bill Number" class="form-control" value="000000">
+            <mat-label>Qty </mat-label>
+            <input matInput placeholder="Qty" class="form-control" >
             </mat-form-field>
         </div>
         <div class="col-sm-2">  
             <mat-form-field class="form-group" >
-            <mat-label>Bill Number </mat-label>
-            <input matInput placeholder="Bill Number" class="form-control" value="000000">
+            <mat-label>Item Type</mat-label>
+            <input matInput placeholder="Item Type" class="form-control" >
+            </mat-form-field>
+        </div>
+        <div class="col-sm-1">  
+            <mat-form-field class="form-group" >
+            <mat-label>Unit </mat-label>
+            <input matInput placeholder="Unit" class="form-control" >
+            </mat-form-field>
+        </div>
+        <div class="col-sm-2">  
+            <mat-form-field class="form-group" >
+            <mat-label>Tax Amount </mat-label>
+            <input matInput placeholder="Tax Amount" class="form-control" >
             </mat-form-field>
         </div>
 
@@ -91,36 +93,132 @@
     </form> 
 
 
-
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef> No. </th>
-        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-    </ng-container>
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
-        <th mat-header-cell *matHeaderCellDef> Weight </th>
-        <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-    </ng-container>
-
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-        <th mat-header-cell *matHeaderCellDef> Symbol </th>
-        <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+    <div class="mat-elevation-z8 mt-1">
+        <table mat-table [dataSource]="dataSource">
+      
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
+          
+      
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+      
+          <!-- Weight Column -->
+          <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef> Weight </th>
+            <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+          </ng-container>
+      
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef> Symbol </th>
+            <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+          </ng-container>
+          
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                       showFirstLastButtons 
+                       aria-label="Select page of periodic elements">
+        </mat-paginator>
+      </div>
 </div>
-<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3"></div>
+<!-- Right Side -->
+<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+    <div class="col-sm-12 mt-2">
+       <h3> GST Type</h3>
+    </div>
+    <div class="col-sm-12">  
+        <mat-form-field class="form-group" >
+        <mat-label>GST Number </mat-label>
+        <input matInput placeholder="GST Number" class="form-control">
+        </mat-form-field>
+    </div>
+    <div class="col-sm-12">  
+        <mat-form-field class="form-group" >
+        <mat-label>Email </mat-label>
+        <input matInput placeholder="Email" class="form-control">
+        </mat-form-field>
+    </div>
+    <div class="col-sm-12">  
+        <mat-form-field class="form-group" >
+        <mat-label>Address </mat-label>
+        <textarea placeholder="Address" matInput></textarea>
+        </mat-form-field>
+    </div>
+  <!-- credit portion -->
+    <div class="col-sm-12 mt-2">
+      <mat-label class="col-sm-8">Counter No :</mat-label>
+      <mat-label class="col-sm-4 pull-right">1 </mat-label>
+    </div>
+    <div class="col-sm-12 mt-1">
+      <mat-label class="col-sm-8">Total Credit :</mat-label>
+      <mat-label class="col-sm-4 pull-right">0 </mat-label>
+    </div>
+    <div class="col-sm-12 mt-1">
+      <mat-label class="col-sm-8">Apply Credit Bill :</mat-label>
+      <mat-label class="col-sm-4 pull-right">0 </mat-label>
+    </div>
+
+<!-- Bill Portion -->
+<div class="col-sm-12 mt-2">
+  <h2>Your Shopping </h2>
+</div>
+<div class="col-sm-12 mt-1">
+  <mat-label class="col-sm-8">Sub Total</mat-label>
+  <mat-label class="col-sm-4 pull-right">0 </mat-label>
+</div>
+<div class="col-sm-12 mt-1">
+  <mat-label class="col-sm-8">Total Tax</mat-label>
+  <mat-label class="col-sm-4 pull-right">0 </mat-label>
+</div>
+<div class="col-sm-12 mt-1">
+  <mat-label class="col-sm-8">Total Amount</mat-label>
+  <mat-label class="col-sm-4 pull-right txt-red-b">0 </mat-label>
+</div>
+<div class="col-sm-12 mt-1">
+  
+    <mat-label class="col-sm-6">Discount </mat-label>
+    <div class="col-sm-6 pull-right">
+      <input matInput placeholder="Discount Amount" class="form-control txt-right" >
+    </div>
+    
+</div>
+<div class="col-sm-12 mt-1">
+  <mat-label class="col-sm-8">Net Amount</mat-label>
+  <mat-label class="col-sm-4 pull-right txt-red-b">0 </mat-label>
+</div>
+
+<div class="col-sm-12 mt-1">
+
+    <mat-label class="col-sm-6">Recieved Amount </mat-label>
+    <div class="col-sm-6 pull-right">
+      <input matInput placeholder="Recieved Amount" class="form-control txt-right" >
+    </div>  
+</div>
+
+<div class="col-sm-12 mt-1">
+  <mat-label class="col-sm-8">Return Amount</mat-label>
+  <mat-label class="col-sm-4 pull-right">0 </mat-label>
+</div>
+<!-- Button -->
+<div class="row mt-1 pull-right">
+  <div class="col-sm-6 pull-right">
+<button mat-raised-button color="primary">Print</button>
+</div> 
+<div class="col-sm-4 pull-right">
+<button mat-raised-button color="warn">Clear</button>
+</div>
+</div>
+</div>
+</div> 
 </div>

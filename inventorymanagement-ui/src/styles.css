@@ -2,3 +2,24 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-form-field-infix{
+    width: 100% !important;
+}
+.mt-2{
+    margin-top: 20px;
+  }
+  .mt-1{
+    margin-top: 10px;
+  }
+  .txt-red-b{
+      font-weight: 900;
+      font-size: 18px;
+      color:red;
+
+  }
+  .txt-right{
+      text-align: right !important;
+  }
+  .txt-left{
+    text-align: left !important;
+}
