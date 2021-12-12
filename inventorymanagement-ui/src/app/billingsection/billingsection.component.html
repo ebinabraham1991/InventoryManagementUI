@@ -42,11 +42,74 @@
       
           </div>
       </div>
-
+<!-- Right Side  -->
       <div class="col-9">
-       Content Area
+      <div class="row mt-2">
+        <div class="title-2">New Product Upload</div>
+      </div>
+      <div class="row mt-1"> 
+        <div class="col-sm-4">  
+          <mat-form-field class="form-group" >
+          <mat-label>Barcode Number </mat-label>
+          <input matInput placeholder="Barcode Number" class="form-control">
+          </mat-form-field>
+      </div>
+      <div class="col-sm-4">  
+        <mat-form-field class="form-group" >
+        <mat-label>Product Name </mat-label>
+        <input matInput placeholder="Product Name " class="form-control">
+        </mat-form-field>
     </div>
+    <div class="col-sm-4">  
+      <mat-form-field class="form-group" >
+      <mat-label>Price </mat-label>
+      <input matInput placeholder="Price" class="form-control">
+      </mat-form-field>
+  </div>
 
+  <div class="col-sm-4">  
+    <mat-form-field class="form-group" >
+    <mat-label>Discount </mat-label>
+    <input matInput placeholder="Discount" class="form-control">
+    </mat-form-field>
+</div>
+<div class="col-sm-4">  
+  <mat-form-field class="form-group" >
+  <mat-label>Tax Amount </mat-label>
+  <input matInput placeholder="Tax Amount" class="form-control">
+  </mat-form-field>
+</div>
+<div class="col-sm-4">  
+  <mat-form-field >
+    <mat-label>Select Category</mat-label>
+    <mat-select >
+      <mat-option value="primary">Primary</mat-option>
+      <mat-option value="accent">Accent</mat-option>
+      <mat-option value="warn">Warn</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div class="col-sm-4">  
+  <mat-form-field>
+    <mat-label>Select Brand</mat-label>
+    <mat-select>
+      <mat-option value="option">Option</mat-option>
+      <mat-option value="option">Option</mat-option>
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+   
+  </mat-form-field>
+</div>
+
+      </div>
+   <div class="row mt-1">
+    <div class="col-sm-12 float-end">  
+      <a href="#" target="_blank"><button mat-raised-button color="primary" class="float-end">Clear</button></a>
+      <a href="#" target="_blank"><button mat-raised-button color="primary" class="float-end mx-3 ">Submit</button></a> 
+     </div>
+   </div>   
+    </div>
+<!-- End Content Are -->
 
 
     </div><!-- row -->  

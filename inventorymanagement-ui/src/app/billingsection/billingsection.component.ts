@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './billingsection.component.html',
   styleUrls: ['./billingsection.component.css']
 })
+
 export class BillingsectionComponent implements OnInit {
 
   constructor() { }
@@ -13,3 +14,5 @@ export class BillingsectionComponent implements OnInit {
   }
 
 }
+
+
